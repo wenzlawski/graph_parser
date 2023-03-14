@@ -3,8 +3,6 @@
 
 set -eu
 
-pip install pip==20.2
-
 mkdir -p data/
 mkdir -p log/
 

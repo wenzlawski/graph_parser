@@ -13,5 +13,5 @@ if [ ! -e utils/converter/argmicro/emnlp2015 ]; then
 fi
 
 # Install packages
-pip install pip==20.2
-pip install torch==1.5.1 transformers==4.5.1 protobuf==3.16.0
+#pip install torch==1.5.1 transformers==4.5.1 protobuf==3.16.0
+pip install protobuf=3.20
