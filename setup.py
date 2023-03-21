@@ -21,7 +21,6 @@ setup(
         'transformers>4.0.0',
         'torch==1.11.0',
         'tensorboard>=2.3.*',
-        'tensorflow==2.3.*',
         'keras',
         'coloredlogs>=14.0',
         'jq>=1.0.2',
@@ -44,3 +43,5 @@ setup(
     zip_safe=False,
     entry_points=dict(),
 )
+
+# 'tensorflow==2.3.*',
