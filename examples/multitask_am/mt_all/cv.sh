@@ -6,7 +6,7 @@
 set -eu
 
 export TOKENIZERS_PARALLELISM=false
-ALL_CORPORA="./data/input/aaec_essay.mrp ./data/input/aasd.mrp ./data/input/abstrct.mrp ./data/input/mtc.mrp ./data/input/cdcp.mrp"
+ALL_CORPORA="./data/input/aaec_essay.mrp ./data/input/abstrct.mrp ./data/input/mtc.mrp ./data/input/cdcp.mrp"
 EXCLUDE=".\/data\/input\/${CORPUS}.mrp"
 PRETRAIN_CORPORA=$(sed "s/${EXCLUDE}//g" <<<"${ALL_CORPORA}")
 
@@ -86,7 +86,7 @@ for CV in {0..49} ; do
         --attention_window 512 \
         --batch_size 4 \
         --eval_batch_size 16 \
-        --postprocessor "default:default,aaec:aaec,aaec_essay:aaec,aaec_para:aaec,mtc:mtc,cdcp:cdcp,abstrct:abstrct,aasd:aasd,tree:mtc,trees:aaec,graph:cdcp" \
+        --postprocessor "default:default,aaec:aaec,aaec_essay:aaec,aaec_para:aaec,mtc:mtc,cdcp:cdcp,abstrct:abstrct,tree:mtc,trees:aaec,graph:cdcp" \
         --embed_dropout 0.1 \
         --mlp_dropout 0.1 \
         --dim_mlp 768 \
@@ -121,7 +121,7 @@ for CV in {0..49} ; do
         --attention_window 512 \
         --batch_size 4 \
         --eval_batch_size 16 \
-        --postprocessor "default:default,aaec:aaec,aaec_essay:aaec,aaec_para:aaec,mtc:mtc,cdcp:cdcp,abstrct:abstrct,aasd:aasd,tree:mtc,trees:aaec,graph:cdcp" \
+        --postprocessor "default:default,aaec:aaec,aaec_essay:aaec,aaec_para:aaec,mtc:mtc,cdcp:cdcp,abstrct:abstrct,tree:mtc,trees:aaec,graph:cdcp" \
         --lambda_bio 1.0 \
         --lambda_proposition ${lambda_proposition} \
         --lambda_arc ${lambda_arc} \
