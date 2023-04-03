@@ -15,4 +15,4 @@ fi
 
 # Install packages
 #pip install torch==1.5.1 transformers==4.5.1 protobuf==3.16.0
-pip install protobuf=3.20
+pip install protobuf==3.20
